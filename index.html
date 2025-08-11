@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lễ tốt nghiệp của Minh Hoàng</title>
+<style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        margin: 0;
+        background: linear-gradient(135deg, #0a3d62, #3c6382);
+        color: white;
+        text-align: center;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+    header {
+        padding: 30px;
+        background: rgba(0, 0, 0, 0.3);
+        animation: fadeInDown 1.5s ease;
+    }
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        color: #00d8ff;
+        text-shadow: 0 0 15px rgba(0, 216, 255, 0.8);
+    }
+    p {
+        font-size: 1.2rem;
+        margin: 5px 0;
+    }
+    .card {
+        background: rgba(255, 255, 255, 0.1);
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 15px;
+        width: 90%;
+        max-width: 600px;
+        box-shadow: 0 0 20px rgba(0, 216, 255, 0.3);
+        animation: fadeInUp 1.5s ease;
+    }
+    iframe {
+        border: none;
+        width: 100%;
+        height: 600px;
+        border-radius: 15px;
+        margin-top: 20px;
+    }
+    .tech-line {
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        background: rgba(0, 216, 255, 0.4);
+        animation: moveDown 4s linear infinite;
+    }
+    .tech-line:nth-child(1) { left: 10%; }
+    .tech-line:nth-child(2) { left: 50%; animation-delay: 1s; }
+    .tech-line:nth-child(3) { left: 80%; animation-delay: 2s; }
+
+    /* Nút phát sáng */
+    .glow-btn {
+        display: inline-block;
+        padding: 12px 25px;
+        margin-top: 15px;
+        font-size: 1.2rem;
+        color: white;
+        background: #00d8ff;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        text-decoration: none;
+        box-shadow: 0 0 20px rgba(0, 216, 255, 0.8);
+        animation: pulse 2s infinite;
+        transition: transform 0.2s;
+    }
+    .glow-btn:hover {
+        transform: scale(1.05);
+    }
+
+    @keyframes pulse {
+        0% { box-shadow: 0 0 10px rgba(0, 216, 255, 0.7); }
+        50% { box-shadow: 0 0 25px rgba(0, 216, 255, 1); }
+        100% { box-shadow: 0 0 10px rgba(0, 216, 255, 0.7); }
+    }
+    @keyframes fadeInDown {
+        from { opacity: 0; transform: translateY(-50px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(50px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes moveDown {
+        0% { transform: translateY(-100%); }
+        100% { transform: translateY(100%); }
+    }
+</style>
+</head>
+<body>
+    <!-- Hiệu ứng các đường kỹ thuật -->
+    <div class="tech-line"></div>
+    <div class="tech-line"></div>
+    <div class="tech-line"></div>
+
+    <header>
+        <h1>🎓 Lễ tốt nghiệp của Minh Hoàng 🎓</h1>
+        <p>Chúc mừng bạn đã nhận được thiệp mời đặc biệt này!</p>
+    </header>
+
+    <div class="card">
+        <p>⏰ <strong>Thời gian:</strong> 10h sáng</p>
+        <p>📅 <strong>Ngày:</strong> Chủ Nhật, 17/08/2025</p>
+        <p>🏫 <strong>Địa điểm:</strong> Hội trường tầng 3, Nhà A11, Đại học Công Nghiệp Hà Nội</p>
+        <a href="#survey" class="glow-btn">✅ Xác nhận tham dự</a>
+    </div>
+
+    <div id="survey" class="card">
+        <h2>📋 Khảo sát tham dự</h2>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfdTBQVp4kktjxoHgDq7Vc_M0C7OExcmWFMLUxt0wnRsNlngQ/viewform?embedded=true" 
+                frameborder="0" marginheight="0" marginwidth="0">Đang tải…</iframe>
+    </div>
+</body>
+</html>
