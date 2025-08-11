@@ -8,7 +8,7 @@
     body {
         font-family: 'Segoe UI', sans-serif;
         margin: 0;
-        background: linear-gradient(135deg, #001f3f, #0074D9);
+        background: linear-gradient(135deg, #0a3d62, #3c6382);
         color: white;
         text-align: center;
         overflow-x: hidden;
@@ -16,7 +16,7 @@
     }
     header {
         padding: 30px;
-        background: rgba(0, 0, 0, 0.4);
+        background: rgba(0, 0, 0, 0.3);
         animation: fadeInDown 1.5s ease;
     }
     h1 {
@@ -65,24 +65,6 @@
     .glow-btn:hover {
         transform: scale(1.05);
     }
-
-    /* Siêu xe */
-    .car {
-        position: fixed;
-        bottom: 50px;
-        left: -300px;
-        width: 200px;
-        animation: drive 5s linear infinite;
-        z-index: 999;
-    }
-
-    @keyframes drive {
-        0% { left: -300px; }
-        50% { left: 110%; }
-        100% { left: -300px; }
-    }
-
-    /* Hiệu ứng nút */
     @keyframes pulse {
         0% { box-shadow: 0 0 10px rgba(0, 216, 255, 0.7); }
         50% { box-shadow: 0 0 25px rgba(0, 216, 255, 1); }
@@ -96,12 +78,32 @@
         from { opacity: 0; transform: translateY(50px); }
         to { opacity: 1; transform: translateY(0); }
     }
+
+    /* Hiệu ứng công cụ kỹ thuật */
+    .tool {
+        position: fixed;
+        width: 60px;
+        animation: floatTool 12s linear infinite;
+        z-index: 10;
+        opacity: 0.85;
+    }
+    .tool:nth-child(1) { top: 10%; left: -80px; animation-delay: 0s; }
+    .tool:nth-child(2) { top: 40%; left: -80px; animation-delay: 3s; }
+    .tool:nth-child(3) { top: 70%; left: -80px; animation-delay: 6s; }
+
+    @keyframes floatTool {
+        0% { transform: translateX(0) rotate(0deg); }
+        50% { transform: translateX(120vw) rotate(180deg); }
+        100% { transform: translateX(0) rotate(360deg); }
+    }
 </style>
 </head>
 <body>
 
-    <!-- Xe chạy -->
-    <img src="https://i.ibb.co/FxR7TvH/sports-car.png" alt="Siêu xe" class="car">
+    <!-- Hình công cụ kỹ thuật -->
+    <img src="https://i.ibb.co/fp9ZKy1/wrench.png" class="tool" alt="Cờ lê">
+    <img src="https://i.ibb.co/VgL1q5W/hammer.png" class="tool" alt="Búa">
+    <img src="https://i.ibb.co/2c0yVbf/bolt.png" class="tool" alt="Bu lông">
 
     <header>
         <h1>🎓 Lễ tốt nghiệp của Minh Hoàng 🎓</h1>
