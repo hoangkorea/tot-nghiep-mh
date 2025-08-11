@@ -8,7 +8,7 @@
     body {
         font-family: 'Segoe UI', sans-serif;
         margin: 0;
-        background: linear-gradient(135deg, #0a3d62, #3c6382);
+        background: linear-gradient(135deg, #001f3f, #0074D9);
         color: white;
         text-align: center;
         overflow-x: hidden;
@@ -16,7 +16,7 @@
     }
     header {
         padding: 30px;
-        background: rgba(0, 0, 0, 0.3);
+        background: rgba(0, 0, 0, 0.4);
         animation: fadeInDown 1.5s ease;
     }
     h1 {
@@ -46,17 +46,6 @@
         border-radius: 15px;
         margin-top: 20px;
     }
-    .tech-line {
-        position: absolute;
-        width: 2px;
-        height: 100%;
-        background: rgba(0, 216, 255, 0.4);
-        animation: moveDown 4s linear infinite;
-    }
-    .tech-line:nth-child(1) { left: 10%; }
-    .tech-line:nth-child(2) { left: 50%; animation-delay: 1s; }
-    .tech-line:nth-child(3) { left: 80%; animation-delay: 2s; }
-
     /* Nút phát sáng */
     .glow-btn {
         display: inline-block;
@@ -77,6 +66,23 @@
         transform: scale(1.05);
     }
 
+    /* Siêu xe */
+    .car {
+        position: fixed;
+        bottom: 50px;
+        left: -300px;
+        width: 200px;
+        animation: drive 5s linear infinite;
+        z-index: 999;
+    }
+
+    @keyframes drive {
+        0% { left: -300px; }
+        50% { left: 110%; }
+        100% { left: -300px; }
+    }
+
+    /* Hiệu ứng nút */
     @keyframes pulse {
         0% { box-shadow: 0 0 10px rgba(0, 216, 255, 0.7); }
         50% { box-shadow: 0 0 25px rgba(0, 216, 255, 1); }
@@ -90,17 +96,12 @@
         from { opacity: 0; transform: translateY(50px); }
         to { opacity: 1; transform: translateY(0); }
     }
-    @keyframes moveDown {
-        0% { transform: translateY(-100%); }
-        100% { transform: translateY(100%); }
-    }
 </style>
 </head>
 <body>
-    <!-- Hiệu ứng các đường kỹ thuật -->
-    <div class="tech-line"></div>
-    <div class="tech-line"></div>
-    <div class="tech-line"></div>
+
+    <!-- Xe chạy -->
+    <img src="https://i.ibb.co/FxR7TvH/sports-car.png" alt="Siêu xe" class="car">
 
     <header>
         <h1>🎓 Lễ tốt nghiệp của Minh Hoàng 🎓</h1>
@@ -108,7 +109,7 @@
     </header>
 
     <div class="card">
-        <p>⏰ <strong>Thời gian:</strong> 10h sáng</p>
+        <p>⏰ <strong>Thời gian:</strong> 9h30 sáng</p>
         <p>📅 <strong>Ngày:</strong> Chủ Nhật, 17/08/2025</p>
         <p>🏫 <strong>Địa điểm:</strong> Hội trường tầng 3, Nhà A11, Đại học Công Nghiệp Hà Nội</p>
         <a href="#survey" class="glow-btn">✅ Xác nhận tham dự</a>
@@ -119,5 +120,6 @@
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfdTBQVp4kktjxoHgDq7Vc_M0C7OExcmWFMLUxt0wnRsNlngQ/viewform?embedded=true" 
                 frameborder="0" marginheight="0" marginwidth="0">Đang tải…</iframe>
     </div>
+
 </body>
 </html>
